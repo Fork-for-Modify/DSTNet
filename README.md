@@ -48,12 +48,12 @@ Quantitative evaluations on the BSD deblurring dataset in terms of PSNR and SSIM
 ### Dataset Organization Form
 If you prepare your own dataset, please follow the following form like GOPRO/DVD:
 ```
-|--dataset  
-    |--blur  
+|--dataset
+    |--blur
         |--video 1
             |--frame 1
             |--frame 2
-                ：  
+                ：
         |--video 2
             :
         |--video n
@@ -61,12 +61,12 @@ If you prepare your own dataset, please follow the following form like GOPRO/DVD
         |--video 1
             |--frame 1
             |--frame 2
-                ：  
+                ：
         |--video 2
         	:
         |--video n
 ```
- 
+
 ### Training
 - Download training dataset like above form.
 - Run the following commands:
@@ -78,11 +78,11 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr
 ```
 
 ### Testing
-- Models are available in  `'./experiments/'`.
+- Models are available in  `'./model_zoo/'`.
 - Organize your dataset(GOPRO/DVD/BSD) like the above form.
 - Run the following commands:
 ```
-python basicsr/test.py -opt options/test/Deblur/test_Deblur_GOPRO.yml
+python basicsr/test.py -opt options/test/Deblur/test_Deblur_GOPRO_inr.yml
 cd results
 python merge_full.py
 python calculate_psnr.py

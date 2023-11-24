@@ -2,8 +2,8 @@ import os
 import cv2
 from basicsr.metrics.psnr_ssim import calculate_psnr, calculate_ssim
 
-restor_root = '/media/xbm/data/xbm/BasicSR/BaiscSR1/results/GOPRO'
-gt_root = '/media/xbm/data/VideoDeblur_Dataset/GOPRO/GOPRO_oriname/test/gt'
+restor_root = '/hdd/0/zzh/project/INRT/DSTNet/results/GOPRO/'
+gt_root = '/ssd/1/yrz/Dataset/GoPro_INR/GoPro_test_sharp_resized_cropped/'
 
 psnr = 0.0
 ssim = 0.0

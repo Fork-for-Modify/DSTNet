@@ -13,7 +13,7 @@ datasets:
     cache_data: False
     io_backend:
       type: disk
-
+    
     num_frame: 30
     num_overlap: 0
 
@@ -25,7 +25,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/GOPRO.pth
+  pretrain_network_g: model_zoo/GOPRO.pth
   strict_load_g: true
 
 # validation settingsa

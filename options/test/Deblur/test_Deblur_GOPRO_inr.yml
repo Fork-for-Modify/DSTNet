@@ -1,4 +1,4 @@
-name: BSD_f30
+name: GOPRO_test
 model_type: VideoRecurrentModel
 scale: 1
 num_gpu: 1  # set num_gpu: 0 for cpu mode
@@ -6,15 +6,15 @@ manual_seed: 0
 
 datasets:
   test_1:  # the 1st test dataset
-    name: BSD
+    name: GOPRO
     type: VideoRecurrentSplitClipsTestDataset
-    dataroot_gt: /media/xbm/data/VideoDeblur_Dataset/BSD/BSD_1ms8ms/test/gt
-    dataroot_lq: /media/xbm/data/VideoDeblur_Dataset/BSD/BSD_1ms8ms/test/blur
-    cache_data: True
+    dataroot_gt: /ssd/1/yrz/Dataset/GoPro_INR/GoPro_test_sharp_resized_cropped/
+    dataroot_lq: /ssd/1/yrz/Dataset/GoPro_INR/GoPro_test_blur_gamma_ratio_5_steps_20000_dec/
+    cache_data: False
     io_backend:
       type: disk
-
-    num_frame: 30
+    
+    num_frame: 15 # 30
     num_overlap: 0
 
 # network structures
@@ -25,10 +25,10 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: model_zoo/BSD.pth
+  pretrain_network_g: model_zoo/GOPRO.pth
   strict_load_g: true
 
-# validation settings
+# validation settingsa
 val:
   save_img: true
   flip_seq: false

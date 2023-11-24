@@ -8,8 +8,10 @@ def generate_meta_info_div2k():
     """Generate meta info for DIV2K dataset.
     """
 
-    gt_folder = '/media/xbm/data/VideoDeblur_Dataset/BSD/BSD_3ms24ms_2/train/blur/'
-    meta_info_txt = '/media/xbm/data/xbm/BasicSR/BasicSR_wave/basicsr/data/meta_info/meta_info_BSD_GT.txt'
+    # gt_folder = '/media/xbm/data/VideoDeblur_Dataset/BSD/BSD_3ms24ms_2/train/blur/'
+    # meta_info_txt = '/media/xbm/data/xbm/BasicSR/BasicSR_wave/basicsr/data/meta_info/meta_info_BSD_GT.txt'
+    gt_folder = '/ssd/1/yrz/Dataset/GoPro_INR/GoPro_train_blur_gamma_ratio_5_steps_20000_dec/'
+    meta_info_txt = './basicsr/data/meta_info/meta_info_GoPro_crop_GT.txt'
 
     img_list = sorted(list(scandir(gt_folder)))
     print(img_list)

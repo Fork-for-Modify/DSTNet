@@ -231,9 +231,9 @@ class _idynamic(Function):
 def _idynamic_cuda(input, weight, bias=None, stride=1, padding=0, dilation=1):
     """ idynamic kernel
     """
-    assert input.size(0) == weight.size(0)
-    assert input.size(-2) // stride == weight.size(-2)
-    assert input.size(-1) // stride == weight.size(-1)
+    # assert input.size(0) == weight.size(0) # zzh
+    # assert input.size(-2) // stride == weight.size(-2)
+    # assert input.size(-1) // stride == weight.size(-1)
     if input.is_cuda:
         out = _idynamic.apply(input, weight, _pair(stride), _pair(padding), _pair(dilation))
         if bias is not None:
