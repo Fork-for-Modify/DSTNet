@@ -47,7 +47,7 @@ class VideoBaseModel(SRModel):
 
             self.feed_data(val_data)
             self.test()
-            visuals = self.get_current_visuals()
+            visuals = self.get_current_visuals() # zzh: get result
             result_img = tensor2img([visuals['result']])
             if 'gt' in visuals:
                 gt_img = tensor2img([visuals['gt']])

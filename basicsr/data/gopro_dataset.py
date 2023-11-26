@@ -317,6 +317,6 @@ class GOPRORecurrentDataset2(data.Dataset):
         # img_gts: (t, c, h, w)
         # key: str
         return {'lq': img_lqs, 'gt': img_gts, 'key': key}
-
+    
     def __len__(self):
         return len(self.keys)

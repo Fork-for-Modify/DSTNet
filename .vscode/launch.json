@@ -19,7 +19,7 @@
             "program": "basicsr/train.py",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": ["-opt", "options/train/Deblur/train_Deblur_GOPRO.yml"]
+            "args": ["-opt", "options/train/Deblur/train_Deblur_GOPRO_inr.yml"]
         }
     ]
 }

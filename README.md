@@ -74,7 +74,7 @@ If you prepare your own dataset, please follow the following form like GOPRO/DVD
 Single GPU
 python basicsr/train.py -opt options/train/Deblur/train_Deblur_GOPRO.yml
 Multi-GPUs
-python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train/Deblur/train_Deblur_GOPRO.yml --launcher pytorch
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=4328 basicsr/train.py -opt options/train/Deblur/train_Deblur_GOPRO_inr.yml --launcher pytorch
 ```
 
 ### Testing
